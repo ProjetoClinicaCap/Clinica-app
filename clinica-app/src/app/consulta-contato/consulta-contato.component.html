@@ -1,32 +1,54 @@
-<div class="container">
-    <h1>
-        Consulta de cadastro de médicos
-    </h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nome</th>
-                <th>CRM</th>
-                <th>Telefone</th>
-                <th>Atendimento</th>
-                <th>Especialidade</th>
-                <th>Editar</th>
-                <th>Excluir</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let contato of contatos">
-                <td>{{ contato.id}}</td>
-                <td>{{ contato.nome}}</td>
-                <td>{{ contato.crm}}</td>
-                <td>{{ contato.telefone}}</td>
-                <td>{{ contato.dias}}</td>
-                <td>{{ contato.especialidade.especialidade}}</td>
-                <td> <a [routerLink]="['/cadastro',contato.id]"><i class="material-icons">mode_edit</i></a></td>
-                <td> <i role="button" class="material-icons text-primary" (click)="excluir(contato.id)">delete</i></td>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-image: url('../../assets/clinica6.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+  height: 100vh;
+}
+</style>
+</head>
+<body>
+    <div class="d-flex h-200">
+        
+        <div class="container">
+            <h1>
+                Consulta de cadastro de médicos
+            </h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nome</th>
+                        <th>CRM</th>
+                        <th>Telefone</th>
+                        <th>Atendimento</th>
+                        <th>Especialidade</th>
+                        <th>Editar</th>
+                        <th>Excluir</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let contato of contatos">
+                        <td>{{ contato.id}}</td>
+                        <td>{{ contato.nome}}</td>
+                        <td>{{ contato.crm}}</td>
+                        <td>{{ contato.telefone}}</td>
+                        <td>{{ contato.dias}}</td>
+                        <td>{{ contato.especialidade.especialidade}}</td>
+                        <td> <a [routerLink]="['/cadastro',contato.id]"><i class="material-icons">mode_edit</i></a></td>
+                        <td> <i role="button" class="material-icons text-primary" (click)="excluir(contato.id)">delete</i></td>
+        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+</body>
+</html>
+<router-outlet></router-outlet>
 
-            </tr>
-        </tbody>
-    </table>
-</div>

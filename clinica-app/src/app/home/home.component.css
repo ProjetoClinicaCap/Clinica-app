@@ -7,3 +7,32 @@
 .home .subtitle{
     font-size: 1.1rem;
 }
+
+h3{
+    font-family: "impact";
+}
+
+.text-primary{
+    font-family: "impact";
+}
+
+.map-responsive{
+
+    height: 300px;;
+
+
+}
+/*
+.map-responsive iframe{
+
+    left:0;
+
+    top:0;
+
+    height:100%;
+
+    width:100%;
+
+    position:absolute;
+
+}*/

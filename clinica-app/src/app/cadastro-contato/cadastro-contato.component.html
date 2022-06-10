@@ -1,42 +1,64 @@
-<div class="container">
-    <h6>Formulário de Cadastro</h6>
-    <code>Todos os campos devem ser preenchidos antes de salvá-los</code>
-    <form #f="ngForm" (ngSubmit)="saveContato(f.value)">
-        <input required class="form-control" type="text" #fnome="ngModel" ngModel name="nome" placeholder="Informe nome completo" />
-        <div *ngIf="fnome.errors?.['required']" class="ng-invalid">
-            Seu nome
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-image: url('../../assets/clinica6.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+  height: 100vh;
+}
+</style>
+</head>
+<body>
+    <div class="d-flex h-200 ">
+        
+        <div class="container ">
+            <h5 class="mt-2 ">Formulário de Cadastro</h5>
+            <code>Todos os campos devem ser preenchidos antes de salvá-los</code>
+            <form #f="ngForm" (ngSubmit)="saveContato(f.value)">
+                <input required class="form-control" type="text" #fnome="ngModel" ngModel name="nome" placeholder="Informe nome completo" />
+                <div *ngIf="fnome.errors?.['required']" class="ng-invalid">
+                    Seu nome
+                </div>
+                <input required class="form-control" type="text" #fcrm="ngModel" ngModel name="crm" placeholder="Informe crm"/>
+                <div *ngIf="fcrm.errors?.['required']" class="ng-invalid">
+                   Seu CRM
+                </div>
+                <input required class="form-control" type="text" #ftelefone="ngModel" ngModel name="telefone" placeholder="Informe telefone"/>
+                <div *ngIf="ftelefone.errors?.['required']" class="ng-invalid">
+                    Seu Telefone
+                </div>
+                <input required class="form-control" type="text" #fdias="ngModel" ngModel name="dias" placeholder="Informe dias de atendimento"/>
+                <div *ngIf="fdias.errors?.['required']" class="ng-invalid">
+                    Dias de atendimento
+                </div>
+                <div>
+                    <select #selectEspecialidade="ngModel" class="form-select shadow-none" ngModel name="especialidade" required>
+                        <option>Selecione a especialidade</option>
+                        <option *ngFor="let e of listaEspecialidades">{{e.especialidade}}</option>
+                    </select>
+                    <div *ngIf="selectEspecialidade.errors?.['required']" class="ng-invalid">
+                        Sua especialidade
+                    </div>
+                </div>
+        
+               
+                
+                
+                    <div class="mt-3 mb-3">
+                        <button [disabled]="f.invalid" class="btn btn-primary me-2">Salvar</button>
+                        <button type="reset" class="btn btn-danger">Cancelar</button>
+                    </div>
+        
+                
+            </form>
+            <label>{{ msg }}</label>
         </div>
-        <input required class="form-control" type="text" #fcrm="ngModel" ngModel name="crm" placeholder="Informe crm"/>
-        <div *ngIf="fcrm.errors?.['required']" class="ng-invalid">
-           Seu CRM
-        </div>
-        <input required class="form-control" type="text" #ftelefone="ngModel" ngModel name="telefone" placeholder="Informe telefone"/>
-        <div *ngIf="ftelefone.errors?.['required']" class="ng-invalid">
-            Seu Telefone
-        </div>
-        <input required class="form-control" type="text" #fdias="ngModel" ngModel name="dias" placeholder="Informe dias de atendimento"/>
-        <div *ngIf="fdias.errors?.['required']" class="ng-invalid">
-            Dias de atendimento
-        </div>
-        <div>
-            <select #selectEspecialidade="ngModel" class="form-select shadow-none" ngModel name="especialidade" required>
-                <option>Selecione a especialidade</option>
-                <option *ngFor="let e of listaEspecialidades">{{e.especialidade}}</option>
-            </select>
-            <div *ngIf="selectEspecialidade.errors?.['required']" class="ng-invalid">
-                Sua especialidade
-            </div>
-        </div>
+        
+    </div>
+</body>
+</html>
+<router-outlet></router-outlet>
 
-       
-        
-        
-            <div class="mt-3 mb-3">
-                <button [disabled]="f.invalid" class="btn btn-primary me-2">Salvar</button>
-                <button type="reset" class="btn btn-danger">Cancelar</button>
-            </div>
-
-        
-    </form>
-    <label>{{ msg }}</label>
-</div>
