@@ -1,0 +1,25 @@
+<div class="container">
+    <h6>Cadastro de Usuário</h6>
+    <code>Todos os campos devem ser preenchidos antes de salvá-los</code>
+    <form #f="ngForm" (ngSubmit)="saveContato(f.value)">
+        <input required class="form-control" type="text" #femail="ngModel" ngModel name="email" placeholder="Informe seu e-mail" />
+        <div *ngIf="femail.errors?.['required']" class="ng-invalid">
+            Seu e-mail
+        </div>
+        <input required class="form-control" type="text" #fsenha="ngModel" ngModel name="senha" placeholder="Informe sua senha"/>
+        <div *ngIf="fsenha.errors?.['required']" class="ng-invalid">
+           Sua senha
+        </div>
+
+        
+        <div class="mt-3 mb-3">
+            <button [disabled]="f.invalid" class="btn btn-primary me-2">Salvar</button>
+            <button type="reset" class="btn btn-danger">Cancelar</button>
+        </div>
+</form>
+<label>{{ msg }}</label>
+<div>
+    <a routerLink="/consultausuario">Consultar cadastro?</a>
+</div>
+
+</div>

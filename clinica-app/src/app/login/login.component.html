@@ -1,0 +1,10 @@
+<div class="container">
+    <h4> Sign in</h4>
+    <form #f="ngForm" (ngSubmit)="logar(f.value)">
+        <input class="form-control" type="text" ngModel name="email" placeholder="Informe usuário" />
+        <input class="form-control" type="password" ngModel name="senha" placeholder="Informe senha" />
+        <button class="btn btn-outline-primary">Logar</button>
+    </form>
+    <a routerLink="/cadastrousuario">Não é cadastrado?</a>
+</div>
+<router-outlet></router-outlet>

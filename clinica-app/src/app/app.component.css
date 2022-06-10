@@ -1,0 +1,39 @@
+.site-footer, .page-wrap:after {
+    height: 160px; 
+    font-size: small;
+    margin-top: 20px;
+   
+    
+  }
+
+  p{
+    margin-top: 0; 
+    font-family: "Times New Roman";
+  }
+
+/*nav {
+    background-color: #daedf7;
+    padding: 25px;
+  
+}
+
+
+nav a {
+    text-decoration: none;
+    margin-right: 10px;
+    background-color: #0070AD;
+    padding: 5px;
+    border-bottom-left-radius: 1px;
+    border-top-right-radius: 10px;
+    color: rgb(239, 255, 236);
+}
+
+nav a:hover {
+    background-color: #e9f1f3;
+    color: rgb(14, 177, 177)
+}*/
+/*
+
+.estilo {
+    padding-left: 100%;
+}*/

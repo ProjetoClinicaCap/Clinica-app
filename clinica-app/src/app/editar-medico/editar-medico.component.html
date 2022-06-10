@@ -1,0 +1,17 @@
+<div class="container">
+    <h3 class="text-center">Editar dados do Médico</h3>
+  
+    <input class="form-control" type="text" [(ngModel)]="contato.nome" />
+    <input class="form-control" type="text" [(ngModel)]="contato.crm" />
+    <input class="form-control" type="text" [(ngModel)]="contato.telefone" />
+    <input class="form-control" type="text" [(ngModel)]="contato.dias" />
+    <select class="form-select shadow-none" [(ngModel)]="contato.especialidade.id"
+      required>
+      <option>Selecione a especialidade</option>
+      <option *ngFor="let e of listaEspecialidades" [ngValue]="e.id">{{ e.especialidade }}</option>
+    </select>
+    <button class="btn btn-primary mt-3" (click)="efetivarAlteracao()">
+      Gravar
+    </button>
+    {{ msg }}
+  </div>

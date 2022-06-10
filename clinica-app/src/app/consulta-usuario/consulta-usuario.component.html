@@ -1,0 +1,26 @@
+<div class="container">
+    <h1>
+        Consulta de Usuários
+    </h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>E-mail</th>
+                <th>senha</th>
+                <th>Editar</th>
+                <th>Excluir</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of usuarios">
+                <td>{{ user.id}}</td>
+                <td>{{ user.email}}</td>
+                <td>{{ user.senha}}</td>
+                <td> <a [routerLink]="['/usuario',user.id]"><i class="material-icons">mode_edit</i></a></td>
+                <td> <i role="button" class="material-icons text-primary" (click)="excluir(user.id)">delete</i></td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,35 @@
+input {
+  
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 1%;
+  display: block;
+  width: 50%;
+  margin-bottom: 5px;
+  border-radius: 8px;
+  margin-left: 25%;
+ 
+}
+button {
+  display: inline;
+  background-color: #0070AD;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-left: 40%;
+  border-style: double;
+}
+
+a {
+  margin-left: 40%;
+}
