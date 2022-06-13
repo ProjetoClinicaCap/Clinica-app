@@ -25,7 +25,7 @@ const routes: Routes = [
   {
     path: 'cadastrocontato',
     component: CadastroContatoComponent,
-    canActivate: [AuthLogin],
+  
 
     
   },
