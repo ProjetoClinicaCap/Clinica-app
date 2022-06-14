@@ -14,6 +14,7 @@ import { ConsultaUsuarioComponent } from './consulta-usuario/consulta-usuario.co
 import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario.component';
 import { EditarMedicoComponent } from './editar-medico/editar-medico.component';
 import { ErrosComponent } from './erros/erros.component';
+import { MedicosComponent } from './medicos/medicos.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ErrosComponent } from './erros/erros.component';
     RegistrarUsuarioComponent,
     ConsultaUsuarioComponent,
     EditaUsuarioComponent,
-    ErrosComponent
+    ErrosComponent,
+    MedicosComponent
   ],
   imports: [
     BrowserModule,
