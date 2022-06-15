@@ -9,7 +9,8 @@ export class AuthenticationService {
   constructor(private http: HttpClient) { }
 
   logar(email: string, senha: string){
-    return this.http.post('http://localhost:8080/usuario',{
+    console.log(email,senha);
+    return this.http.post('https://clinica-cap.herokuapp.com/usuario/login',{
       email: email,
       senha: senha
     })

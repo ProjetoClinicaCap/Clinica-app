@@ -6,31 +6,30 @@ import { Injectable } from '@angular/core';
 })
 export class UsuarioService {
   gravar(dados: any){
-    let url = 'http://localhost:8080/usuario'
+    let url = ''
     return this.http.post(url,dados)
   }
 
-  getOne(idcontato: number){
-    return this.http.get(`http://localhost:8080/usuario/${idcontato}`)
+  getOne(email: any){    
+    return this.http.get(`https://clinica-cap.herokuapp.com/usuario/${email}`)
   }
   alterar(dados:any){
-    let url = `http://localhost:8080/usuario/${dados.id}`
+    let url = `https://clinica-cap.herokuapp.com/usuario/${dados.email}`
     return this.http.put(url, dados)
   }
-  excluir(idcontato : number) {
-    return this.http.delete(`http://localhost:8080/usuario/${idcontato}`)
+  excluir(email: string) {
+    return this.http.delete(`https://clinica-cap.herokuapp.com/usuario/${email}`)
   }
-
 
   constructor(private http: HttpClient) {  }
 
   save(data: any){
-    let url = 'http://localhost:8080/usuario'
+    let url = 'https://clinica-cap.herokuapp.com/usuario'
     return this.http.post(url, data);
   }
 
   getAll(){
-    let url = 'http://localhost:8080/medico'
+    let url = 'https://clinica-cap.herokuapp.com/usuario'
     return this.http.get(url)
   }
 }

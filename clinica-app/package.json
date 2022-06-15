@@ -19,6 +19,7 @@
     "@angular/platform-browser-dynamic": "~13.3.0",
     "@angular/router": "~13.3.0",
     "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
     "jsonwebtoken": "^8.5.1",
     "jwt-decode": "^3.1.2",
     "rxjs": "~7.5.0",

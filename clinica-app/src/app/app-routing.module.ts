@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthAdm } from './auth-adm.service';
 import { AuthLogin } from './auth-login.service';
 import { CadastroContatoComponent } from './cadastro-contato/cadastro-contato.component';
 import { ConsultaContatoComponent } from './consulta-contato/consulta-contato.component';
@@ -25,13 +26,15 @@ const routes: Routes = [
   {
     path: 'cadastrocontato',
     component: CadastroContatoComponent,
+    
   
 
     
   },
   {
     path: 'consultacontato',
-    component: ConsultaContatoComponent
+    component: ConsultaContatoComponent,
+
   },
   {
     path: 'login',
@@ -47,10 +50,11 @@ const routes: Routes = [
   },
   {
     path: 'consultausuario',
-    component: ConsultaUsuarioComponent
+    component: ConsultaUsuarioComponent,
+
   },
   {
-    path:'usuario/:idusuario',
+    path:'usuario/:email',
     component: EditaUsuarioComponent
   }
 ];

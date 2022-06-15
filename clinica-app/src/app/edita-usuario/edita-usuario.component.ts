@@ -15,14 +15,17 @@ export class EditaUsuarioComponent implements OnInit {
   constructor(private route: ActivatedRoute, 
     private serviceUsuario: UsuarioService,) { }
 
-    efetivarAlteracao(){
-      this.serviceUsuario.alterar(this.user).subscribe(x => this.msg = "Registro alterado com sucesso" )
-    }
-
+    
   ngOnInit(): void {
     let routeParams = this.route.snapshot.paramMap;
-    let idusuario: number = Number(routeParams.get('idusuario'))
-    this.serviceUsuario.getOne(idusuario).subscribe(x => this.user = x)
+    let email: any = String(routeParams.get('email'))
+    console.log('Email: '+email)
+    this.serviceUsuario.getOne(email).subscribe(x => this.user = x)
   }
+
+  efetivarAlteracao(){
+    this.serviceUsuario.alterar(this.user).subscribe(x => this.msg = "Registro alterado com sucesso" )
+  }
+
 
 }

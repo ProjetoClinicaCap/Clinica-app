@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../authentication.service';
 import { DecodeTokenService } from '../decode-token.service';
 import { UsuarioService } from '../usuario.service';
+import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -16,13 +17,13 @@ export class LoginComponent  {
   constructor(
     private auth: AuthenticationService,
     private decodeToken: DecodeTokenService,
-
-    ) { }
+    private router: Router) { }
 
   logar(form: any){
     this.auth.logar(form.email, form.senha).subscribe(
       token => {
         localStorage.setItem('token', JSON.stringify(token))
+
       } 
     )
   }
