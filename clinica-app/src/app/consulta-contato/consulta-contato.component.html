@@ -20,6 +20,16 @@ body {
             <h1>
                 Consulta de cadastro de médicos
             </h1>
+            
+            <div class="form-group has-search">
+                <span class="fa fa-search form-control-feedback"></span>
+                <input
+                    type="text" class="form-control mb-3"
+                    placeholder="Pesquise por especialidade"
+                    
+                    (keyup)="filtro = $any($event.target).value">
+              </div>
+            
             <table>
                 <thead>
                     <tr>
@@ -34,7 +44,7 @@ body {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let contato of contatos">
+                    <tr *ngFor="let contato of contatos | filter : filtro">
                         <td>{{ contato.id}}</td>
                         <td>{{ contato.nome}}</td>
                         <td>{{ contato.crm}}</td>

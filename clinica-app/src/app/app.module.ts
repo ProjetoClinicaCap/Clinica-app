@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule} from '@angular/common/http'
+import { HttpClientModule} from '@angular/common/http';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,7 @@ import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario
 import { EditarMedicoComponent } from './editar-medico/editar-medico.component';
 import { ErrosComponent } from './erros/erros.component';
 import { MedicosComponent } from './medicos/medicos.component';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -28,14 +30,16 @@ import { MedicosComponent } from './medicos/medicos.component';
     ConsultaUsuarioComponent,
     EditaUsuarioComponent,
     ErrosComponent,
-    MedicosComponent
+    MedicosComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

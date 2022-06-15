@@ -7,7 +7,8 @@ import { ServiceContatoService } from '../service-contato.service';
   styleUrls: ['./medicos.component.css']
 })
 export class MedicosComponent implements OnInit {
-
+  filtro: string = ''; 
+  
   contatos: any;
 
   constructor(private serviceContato: ServiceContatoService) { 
