@@ -9,6 +9,7 @@ import { EditaUsuarioComponent } from './edita-usuario/edita-usuario.component';
 import { EditarMedicoComponent } from './editar-medico/editar-medico.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { MedicosComponent } from './medicos/medicos.component';
 import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario.component';
 
 const routes: Routes = [
@@ -56,7 +57,12 @@ const routes: Routes = [
   {
     path:'usuario/:email',
     component: EditaUsuarioComponent
+  },
+  {
+    path:'medicos',
+    component: MedicosComponent
   }
+
 ];
 
 @NgModule({

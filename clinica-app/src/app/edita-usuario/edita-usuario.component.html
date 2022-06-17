@@ -5,24 +5,25 @@
 body {
   background-image: url('../../assets/clinica6.jpg');
   background-repeat: no-repeat;
-  background-attachment: fixed;  
+  background-attachment: fixed;
   background-size: cover;
   height: 100vh;
-}
+
 </style>
 </head>
 <body>
     <div class="d-flex h-200">
       <div class="container">
         <h3 class="text-center">Editar dados do Usuário</h3>
-      
-        <input class="form-control" type="text" [(ngModel)]="user.email" />
-        <input class="form-control" type="text" [(ngModel)]="user.perfil" />
-        <input class="form-control" type="text" [(ngModel)]="user.senha" required/>
-     
-        <button class="btn btn-primary mt-3" (click)="efetivarAlteracao()">Salvar</button>{{ msg }}
+
+        <input class="form-control mb-2" type="text" [(ngModel)]="user.email" />
+        <input class="form-control mb-2" type="text" [(ngModel)]="user.perfil" />
+        <input class="form-control mb-2" type="text" [(ngModel)]="user.senha" required/>
+
+        <button class="btn btn-primary mt-3" (click)="efetivarAlteracao()">Gravar</button>
+        <label class="text-success font-weight-bold">{{ msg }}</label>
       </div>
-        
+
     </div>
 </body>
 </html>

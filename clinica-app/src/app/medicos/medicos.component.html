@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-image: url('../../assets/background2.jpg');
+  background-attachment:fixed; 
+  background-repeat:round;  
+  background-size: cover;
+  min-height: 100vh;
+  max-height: fit-content;
+  min-width: 100vw;
+ 
+}
+</style>
+</head>
+<body >
+    
+        
+        <div class="container">
+            <h1>
+                Consulta de cadastro de médicos
+            </h1>
+            
+            <div class="form-group has-search">
+              <span class="fa fa-search form-control-feedback"></span>
+              <input
+                  type="text" class="form-control mb-3"
+                  placeholder="Pesquise por especialidade"
+                  
+                  (keyup)="filtro = $any($event.target).value">
+            </div>
+
+        </div>
+            <div id="cards">
+                <div class="card col-4 mb-3 ml-3" style="width: 14rem;" *ngFor="let contato of contatos | filter : filtro">
+                    <img class="card-img-top" src="assets/medico.png" alt="Icone médico" width="40" height="150">
+                    <div class="card-body">
+                      <h5 class="card-title text-center">{{ contato.nome}}</h5>
+                        <p>CRM: {{ contato.crm}}</p>
+                        <p>Telefone: {{ contato.telefone}}</p>
+                        <p>Dias de atendimento: {{ contato.dias}}</p>
+                        <p>Especialidade: {{ contato.especialidade.especialidade}}</p>
+                    </div>
+                  </div>
+            </div>
+            
+        
+   
+</body>
+</html>
+<router-outlet></router-outlet>
