@@ -2,32 +2,54 @@
 <html>
 <head>
 <style>
-body {
+
+form{
   background-image: url('../../assets/clinica6.jpg');
   background-repeat: no-repeat;
-  background-attachment: scroll;  
+  background-attachment: scroll;
   background-size: cover;
   height: 100vh;
 }
 </style>
 </head>
-<body>
-    <div class="d-flex h-200">
-        
-        
-            <div class="container ">
-                <h4 class="text-center text-primary mt-30"> Sign in</h4>
-                <form #f="ngForm" (ngSubmit)="logar(f.value)">
-                    <input class="form-control" type="text" ngModel name="email" placeholder="examplo@email.com" />
-                    <input class="form-control" type="password" ngModel name="senha" placeholder="Informe senha" />
-                    <button class="btn btn-outline-primary">Logar</button>
-                </form>
-                <a routerLink="/cadastrousuario">Não é cadastrado?</a>
-            </div>
-        
+
+
+
+<form [formGroup]="loginForm" class="form mt-4" (submit)="login()">
+  <h5 class="text-center">Entrar no sistema </h5>
+
+    <div class="form-group">
+        <input #userNameInput
+            formControlName="email"
+            class="form-control"
+            placeholder="email@exemplo.com"
+            autofocus>
+        <app-message-required
+          *ngIf="loginForm.get('email')?.errors?.['required']"
+          text="User name is required!">
+            </app-message-required>
+
+
     </div>
 
-    
-</body>
-</html>
-<router-outlet></router-outlet>
+    <div class="form-group">
+        <input
+            formControlName="senha"
+            type="password"
+            class="form-control"
+            placeholder="senha">
+
+        <app-message-required
+          *ngIf="loginForm.get('senha')?.errors?.['required']"
+            text="Password is required!">
+        </app-message-required>
+    </div>
+    <button
+        [disabled]="loginForm.invalid"
+        type="submit"
+        class="btn btn-primary btn-block">
+        login
+    </button>
+    <p>Não possui cadastro? <a [routerLink]="['signup']">Cadastre-se aqui</a></p>
+</form>
+

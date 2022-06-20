@@ -1,18 +1,34 @@
+import { ResponseLogin } from './ResponseLogin';
+import { DecodeTokenService } from './decode-token.service';
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient } from '@angular/common/http';
+import { tap } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthenticationService {
+  constructor(private http: HttpClient,
+    private DecodeToken: DecodeTokenService) {}
 
-  constructor(private http: HttpClient) { }
-
-  logar(email: string, senha: string){
-    console.log(email,senha);
-    return this.http.post('https://clinica-cap.herokuapp.com/usuario/login',{
-      email: email,
-      senha: senha
-    })
+  authenticate(email: string, senha: string) {
+    return this.http
+      .post(
+        'https://clinica-cap.herokuapp.com/usuario/login',
+        {
+          email: email,
+          senha: senha,
+        },
+        {
+          observe: 'response',
+        }
+      )
+      .pipe(
+        tap((res) => {
+          let response: ResponseLogin;
+          response = res.body as ResponseLogin;
+          this.DecodeToken.setToken(response.token);
+        })
+      );
   }
 }
