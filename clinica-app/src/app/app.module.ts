@@ -2,8 +2,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule} from '@angular/common/http';
-
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CadastroContatoComponent } from './cadastro-contato/cadastro-contato.component';
@@ -17,6 +15,14 @@ import { EditarMedicoComponent } from './editar-medico/editar-medico.component';
 import { ErrosComponent } from './erros/erros.component';
 import { MedicosComponent } from './medicos/medicos.component';
 import { FilterPipe } from './filter.pipe';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { ErrorsModule } from './errors/errors.module';
+import { MessageRequiredComponent } from './message-required/message-required.component';
+import { HeaderComponent } from './header/header.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatToolbarModule} from '@angular/material/toolbar';
+
 
 
 @NgModule({
@@ -32,7 +38,11 @@ import { FilterPipe } from './filter.pipe';
     EditaUsuarioComponent,
     ErrosComponent,
     MedicosComponent,
-    FilterPipe
+    FilterPipe,
+    MessageRequiredComponent,
+    HeaderComponent,
+
+
   ],
   imports: [
     BrowserModule,
@@ -40,6 +50,11 @@ import { FilterPipe } from './filter.pipe';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    RouterModule,
+    CommonModule,
+    ErrorsModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
 
   ],
   providers: [],

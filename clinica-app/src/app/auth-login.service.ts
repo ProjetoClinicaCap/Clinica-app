@@ -15,12 +15,12 @@ export class AuthLogin implements CanActivate {
     if(!this.temUsuarioLogado()){
        this.router.navigate(['/login'])
     }
-    return true; 
+    return true;
   }
   /*usuario logado*/
   //verficar token
   temUsuarioLogado(): boolean {
-    let token = this.decodeToken.decodeTokenJWT()
-    return token != ""; 
+    let token = this.decodeToken.getToken()
+    return token != "";
   }
 }

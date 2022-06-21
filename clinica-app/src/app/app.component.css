@@ -1,17 +1,15 @@
 .site-footer, .page-wrap:after {
     padding-top: 10px;
-    height: 140px; 
+    height: 140px;
     font-size: small;
-    margin-top: 20px;
+  margin-top: 3%;
+ margin-bottom: 2%;
     background-color: rgb(55, 132, 248);
     /*position:absolute;*/
-    bottom: 0;
-    left: 0;
-    
   }
 
   p{
-    margin-top: 0; 
+    margin-top: 0;
     font-family: "Courier New";
     line-height: 0.7;
   }
@@ -19,7 +17,7 @@
 /*nav {
     background-color: #daedf7;
     padding: 25px;
-  
+
 }
 
 

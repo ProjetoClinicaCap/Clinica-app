@@ -1,0 +1,18 @@
+<header>
+    <div *ngIf="(user$ | async) as user; else login">
+      <i class='fa fa-envelope-open' style='font-size:20px;color:#0070AD'></i>
+          <a class="mr-1"> {{user.email}} </a>
+          <i class=" fa fa-user-circle mr-1"style="font-size:20px;color:#0070AD"></i>
+          <a class="mr-1"> Perfil {{ user.perfil}} </a>
+          <i class=" fa fa-hand-o-right" style="font-size:20px;color:#0070AD"></i>
+          <a (click)="logout()" style="margin-right:20px; color:#0070AD;"> Fazer Logout</a>
+      </div>
+
+      <ng-template #login>
+          <span class="navbar-text">
+            <i class=" fa fa-user-circle mr-1"style="font-size:20px;color:#0070AD"></i>
+              <a [routerLink]="['login']" style="margin-right:20px;"> Fazer Login </a>
+          </span>
+      </ng-template>
+
+</header>

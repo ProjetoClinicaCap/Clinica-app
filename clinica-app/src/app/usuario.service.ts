@@ -10,7 +10,7 @@ export class UsuarioService {
     return this.http.post(url,dados)
   }
 
-  getOne(email: any){    
+  getOne(email: any){
     return this.http.get(`https://clinica-cap.herokuapp.com/usuario/${email}`)
   }
   alterar(dados:any){

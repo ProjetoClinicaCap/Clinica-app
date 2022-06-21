@@ -34,3 +34,5 @@ button {
     background-color: white;
     color: #0070AD;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
