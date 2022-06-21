@@ -19,6 +19,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ErrorsModule } from './errors/errors.module';
 import { MessageRequiredComponent } from './message-required/message-required.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { MessageRequiredComponent } from './message-required/message-required.co
     ErrosComponent,
     MedicosComponent,
     FilterPipe,
-    MessageRequiredComponent
+    MessageRequiredComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

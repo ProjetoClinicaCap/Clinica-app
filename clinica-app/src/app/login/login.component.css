@@ -14,10 +14,10 @@ input {
   box-sizing: border-box;
   margin-top: 1%;
   display: block;
-  width: 50%;
+  width: 30%;
   margin-bottom: 5px;
   border-radius: 8px;
-  margin-left: 25%;
+  margin-left: 33%;
 
 }
 button {
@@ -33,7 +33,7 @@ button {
   font-family: "Arial";
   margin: 4px 2px;
   cursor: pointer;
-  margin-left: 40%;
+  margin-left: 43%;
   border-style: double;
 
 }
@@ -43,5 +43,9 @@ a {
 }
 
 p {
-  margin-left: 35%;
+  margin-left: 40%;
+}
+h5{
+  margin-left: 45%;
+
 }

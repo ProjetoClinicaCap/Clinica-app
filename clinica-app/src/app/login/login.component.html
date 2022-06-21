@@ -16,7 +16,10 @@ form{
 
 
 <form [formGroup]="loginForm" class="form mt-4" (submit)="login()">
-  <h5 class="text-center">Entrar no sistema </h5>
+  <br>
+  <br>
+  <h5 ><i class=" fa fa-user-circle mr-1"style="font-size:80px;color:#0070AD"></i></h5>
+
 
     <div class="form-group">
         <input #userNameInput
@@ -50,6 +53,6 @@ form{
         class="btn btn-primary btn-block">
         login
     </button>
-    <p>Não possui cadastro? <a [routerLink]="['signup']">Cadastre-se aqui</a></p>
+    <p>Não possui cadastro? <a [routerLink]="['/registraUsuario']">Cadastre-se aqui</a></p>
 </form>
 

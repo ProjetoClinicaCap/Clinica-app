@@ -1,3 +1,4 @@
+import { Usuario2Service } from './usuario2.service';
 import { ResponseLogin } from './ResponseLogin';
 import { DecodeTokenService } from './decode-token.service';
 import { Injectable } from '@angular/core';
@@ -9,7 +10,7 @@ import { tap } from 'rxjs';
 })
 export class AuthenticationService {
   constructor(private http: HttpClient,
-    private DecodeToken: DecodeTokenService) {}
+    private Usuario2Service: Usuario2Service) {}
 
   authenticate(email: string, senha: string) {
     return this.http
@@ -27,7 +28,7 @@ export class AuthenticationService {
         tap((res) => {
           let response: ResponseLogin;
           response = res.body as ResponseLogin;
-          this.DecodeToken.setToken(response.token);
+          this.Usuario2Service.setToken(response.token);
         })
       );
   }
