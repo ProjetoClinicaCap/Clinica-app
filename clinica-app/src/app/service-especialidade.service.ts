@@ -10,7 +10,7 @@ export class ServiceEspecialidadeService {
   constructor(private http: HttpClient) { }
 
   getAllEspecialidade() : Observable<string[]> {
-    let url = 'http://localhost:8080/especialidade'
+    let url = 'https://clinica-java.herokuapp.com/especialidade'
     return this.http.get<string[]>(url)
   }
 }
