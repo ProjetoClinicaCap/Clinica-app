@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-light pd-5 ">
+<nav class="container-fluid navbar navbar-expand-lg bg-light pd-5 ">
 
   <div class="dropdown ">
     <button type="button" class="btn btn-primary dropdown-toggle pd-10 ml-5" data-bs-toggle="dropdown">
@@ -20,6 +20,7 @@
   </div>
   <img class="mx-auto" src="assets/logocapCopia.png" alt="cap">
 
+  <label *ngIf="!userLogado.email" class="bg-white">Bem vindo(a), {{ userLogado.email }}</label>
 </nav>
 
 
