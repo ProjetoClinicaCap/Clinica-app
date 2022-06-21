@@ -1,58 +1,66 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
+  <head>
+    <style>
+      form {
+        background-image: url("../../assets/clinica6.jpg");
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: cover;
+        height: 100vh;
+      }
+    </style>
+  </head>
 
-form{
-  background-image: url('../../assets/clinica6.jpg');
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: cover;
-  height: 100vh;
-}
-</style>
-</head>
-
-
-
-<form [formGroup]="loginForm" class="form mt-4" (submit)="login()">
-  <br>
-  <br>
-  <h5 ><i class=" fa fa-user-circle mr-1"style="font-size:80px;color:#0070AD"></i></h5>
-
+  <form [formGroup]="loginForm" class="form mt-4" (submit)="login()">
+    <br />
+    <br />
+    <h5>
+      <i
+        class="fa fa-user-circle mr-1"
+        style="font-size: 80px; color: #0070ad"
+      ></i>
+    </h5>
 
     <div class="form-group">
-        <input #userNameInput
-            formControlName="email"
-            class="form-control"
-            placeholder="email@exemplo.com"
-            autofocus>
-        <app-message-required
-          *ngIf="loginForm.get('email')?.errors?.['required']"
-          text="User name is required!">
-            </app-message-required>
-
-
+      <input
+        #userNameInput
+        formControlName="email"
+        class="form-control"
+        placeholder="email@exemplo.com"
+        autofocus
+      />
+      <app-message-required
+        *ngIf="loginForm.get('email')?.errors?.['required']"
+        text="User name is required!"
+      >
+      </app-message-required>
     </div>
 
     <div class="form-group">
-        <input
-            formControlName="senha"
-            type="password"
-            class="form-control"
-            placeholder="senha">
+      <input
+        formControlName="senha"
+        type="password"
+        class="form-control"
+        placeholder="senha"
+      />
 
-        <app-message-required
-          *ngIf="loginForm.get('senha')?.errors?.['required']"
-            text="Password is required!">
-        </app-message-required>
+      <app-message-required
+        *ngIf="loginForm.get('senha')?.errors?.['required']"
+        text="Password is required!"
+      >
+      </app-message-required>
     </div>
     <button
-        [disabled]="loginForm.invalid"
-        type="submit"
-        class="btn btn-primary btn-block">
-        login
+      [disabled]="loginForm.invalid"
+      type="submit"
+      class="btn btn-primary btn-block"
+    >
+      login
     </button>
-    <p>Não possui cadastro? <a [routerLink]="['/registraUsuario']">Cadastre-se aqui</a></p>
-</form>
-
+    <p>
+      Não possui cadastro?
+      <a [routerLink]="['/registraUsuario']">Cadastre-se aqui</a>
+    </p>
+  </form>
+</html>
