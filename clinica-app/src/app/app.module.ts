@@ -20,6 +20,9 @@ import { RouterModule } from '@angular/router';
 import { ErrorsModule } from './errors/errors.module';
 import { MessageRequiredComponent } from './message-required/message-required.component';
 import { HeaderComponent } from './header/header.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatToolbarModule} from '@angular/material/toolbar';
+
 
 
 @NgModule({
@@ -37,7 +40,9 @@ import { HeaderComponent } from './header/header.component';
     MedicosComponent,
     FilterPipe,
     MessageRequiredComponent,
-    HeaderComponent
+    HeaderComponent,
+
+
   ],
   imports: [
     BrowserModule,
@@ -47,7 +52,10 @@ import { HeaderComponent } from './header/header.component';
     HttpClientModule,
     RouterModule,
     CommonModule,
-    ErrorsModule
+    ErrorsModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

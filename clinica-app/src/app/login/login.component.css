@@ -23,7 +23,7 @@ input {
 button {
   display: inline;
   background-color: #0070AD;
-  border: none;
+
   color: white;
   padding: 15px 32px;
   text-align: center;
@@ -34,7 +34,9 @@ button {
   margin: 4px 2px;
   cursor: pointer;
   margin-left: 43%;
-  border-style: double;
+
+
+
 
 }
 

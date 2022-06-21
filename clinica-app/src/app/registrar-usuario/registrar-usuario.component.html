@@ -1,51 +1,72 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-body {
-  background-image: url('../../assets/clinica6.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  height: 100vh;
-}
-</style>
-</head>
-<body>
+  <head>
+    <style>
+      body {
+        background-image: url("../../assets/clinica6.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
     <div class="d-flex h-200">
-        <div class="container">
-            <h6>Cadastro de Usuário</h6>
-            <code>Todos os campos devem ser preenchidos antes de salvá-los</code>
-            <form #f="ngForm" (ngSubmit)="saveContato(f.value)">
-                <input required class="form-control" type="text" #femail="ngModel" ngModel name="email" placeholder="Informe seu e-mail" />
-                <div *ngIf="femail.errors?.['required']" class="ng-invalid">
-                    Seu e-mail
-                </div>
-                <input required class="form-control" type="text" #fsenha="ngModel" ngModel name="senha" placeholder="Informe sua senha"/>
-                <div *ngIf="fsenha.errors?.['required']" class="ng-invalid">
-                   Sua senha
-                </div>
-                <input required class="form-control" type="text" #femail="ngModel" ngModel name="perfil" placeholder="Informe seu Perfil" />
-                <div *ngIf="femail.errors?.['required']" class="ng-invalid">
-                    Usuário ou Administrador?
-                </div>
+      <div class="container">
+        <h6>Cadastro de Usuário</h6>
+        <code>Todos os campos devem ser preenchidos antes de salvá-los</code>
+        <form #f="ngForm" (ngSubmit)="saveContato(f.value)">
+          <input
+            required
+            class="form-control"
+            type="text"
+            #femail="ngModel"
+            ngModel
+            name="email"
+            placeholder="Informe seu e-mail"
+          />
+          <div *ngIf="femail.errors?.['required']" class="ng-invalid">
+            Seu e-mail
+          </div>
+          <input
+            required
+            class="form-control"
+            type="text"
+            #fsenha="ngModel"
+            ngModel
+            name="senha"
+            placeholder="Informe sua senha"
+          />
+          <div *ngIf="fsenha.errors?.['required']" class="ng-invalid">
+            Sua senha
+          </div>
+          <input
+            required
+            class="form-control"
+            type="text"
+            #femail="ngModel"
+            ngModel
+            name="perfil"
+            placeholder="Informe seu Perfil"
+          />
+          <div *ngIf="femail.errors?.['required']" class="ng-invalid">
+            Usuário ou Administrador?
+          </div>
 
-
-                <div class="mt-3 mb-3">
-                    <button [disabled]="f.invalid" class="btn btn-primary me-2">Salvar</button>
-                    <button type="reset" class="btn btn-danger">Cancelar</button>
-                </div>
+          <div class="mt-3 mb-3">
+            <button [disabled]="f.invalid" class="btn btn-primary me-2">
+              Salvar
+            </button>
+            <button type="reset" class="btn btn-danger">Cancelar</button>
+          </div>
         </form>
         <label class="text-success font-weight-bold">{{ msg }}</label>
         <div>
-            <a routerLink="/consultausuario">Consultar cadastro?</a>
+          <a routerLink="/consultausuario">Consultar cadastro?</a>
         </div>
-
-        </div>
-
+      </div>
     </div>
-</body>
+  </body>
 </html>
 <router-outlet></router-outlet>
-
-
