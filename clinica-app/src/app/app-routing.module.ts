@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { MedicosComponent } from './medicos/medicos.component';
 import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario.component';
+import { ErrosComponent } from './erros/erros.component';
 
 const routes: Routes = [
 
@@ -27,6 +28,7 @@ const routes: Routes = [
   {
     path: 'cadastrocontato',
     component: CadastroContatoComponent,
+    canActivate: [AuthAdm]
 
 
 
@@ -36,6 +38,7 @@ const routes: Routes = [
   {
     path: 'consultacontato',
     component: ConsultaContatoComponent,
+    canActivate: [AuthAdm]
 
 
   },
@@ -49,11 +52,7 @@ const routes: Routes = [
     component: EditarMedicoComponent
 
   },
-  {
-    path: 'cadastrocontato',
-    component: CadastroContatoComponent,
 
-  },
   {
     path: 'registraUsuario',
     component: RegistrarUsuarioComponent,
@@ -62,9 +61,7 @@ const routes: Routes = [
   {
     path: 'consultausuario',
     component: ConsultaUsuarioComponent,
-
-
-
+    canActivate: [AuthAdm]
   },
   {
     path:'usuario/:email',
@@ -74,9 +71,8 @@ const routes: Routes = [
     path:'medicos',
     component: MedicosComponent,
 
+  },
 
-
-  }
 
 ];
 

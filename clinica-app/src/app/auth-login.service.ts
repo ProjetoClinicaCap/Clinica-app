@@ -17,8 +17,6 @@ export class AuthLogin implements CanActivate {
     }
     return true;
   }
-  /*usuario logado*/
-  //verficar token
   temUsuarioLogado(): boolean {
     let token = this.decodeToken.getToken()
     return token != "";
