@@ -18,24 +18,27 @@
         <li><h5 class="dropdown-header">Usuários</h5></li>
         <li class="dropdown-item">
           <a *ngIf="!userLogado.email" class="text-decoration-none" routerLink="consultausuario"
-            >Consulta de usuários</a
-          >
+            >Consulta de usuários</a>
         </li>
         <li><hr class="dropdown-divider" /></li>
         <li><h5 class="dropdown-header">Médicos e especialidades</h5></li>
         <li class="dropdown-item">
-          <a class="text-decoration-none" routerLink="medicos"
-            >Consulta de médicos</a
-          >
+          <a *ngIf="!userLogado.email" class="text-decoration-none" routerLink="medicos"
+            >Consulta de médicos</a>
         </li>
         <li class="dropdown-item">
-          <a *ngIf="userLogado.perfil=='ADM'" class="text-decoration-none" routerLink="cadastrocontato"
+          <a *ngIf="!userLogado.email" class="text-decoration-none" routerLink="cadastrocontato"
             >Cadastro de médicos</a
           >
         </li>
         <li class="dropdown-item">
           <a *ngIf="userLogado.perfil=='ADM'" class="text-decoration-none" routerLink="consultacontato"
             >Consulta de médicos ADM</a
+          >
+        </li>
+        <li class="dropdown-item">
+          <a class="text-decoration-none" routerLink="registraUsuario"
+            >Registrar-se</a
           >
         </li>
       </ul>
