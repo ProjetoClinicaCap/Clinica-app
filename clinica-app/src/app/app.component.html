@@ -37,7 +37,7 @@
           >
         </li>
         <li class="dropdown-item">
-          <a *ngIf="userLogado.perfil=='ADM'" class="text-decoration-none" routerLink="consultacontato"
+          <a *ngIf="!userLogado.email" class="text-decoration-none" routerLink="consultacontato"
             >Consulta de médicos ADM</a
           >
         </li>
