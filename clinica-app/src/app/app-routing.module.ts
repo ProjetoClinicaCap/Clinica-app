@@ -13,6 +13,7 @@ import { MedicosComponent } from './medicos/medicos.component';
 import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario.component';
 import { ErrosComponent } from './erros/erros.component';
 
+
 const routes: Routes = [
 
   {
@@ -24,7 +25,7 @@ const routes: Routes = [
     path: 'home',
     component: HomeComponent
   },
-
+  
   {
     path: 'cadastrocontato',
     component: CadastroContatoComponent,
