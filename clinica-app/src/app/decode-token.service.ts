@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import jwt from "jwt-decode";
+
 
 
 const KEY = 'token';
@@ -23,4 +23,5 @@ getToken() {
 removeToken() {
     window.localStorage.removeItem(KEY);
 }
+
 }

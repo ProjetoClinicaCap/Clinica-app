@@ -1,53 +1,66 @@
-<nav class="navbar navbar-expand-lg bg-light pd-5">
-  <div class="dropdown">
-    <button
-      type="button"
-      class="btn btn-primary dropdown-toggle pd-10 ml-5"
-      data-bs-toggle="dropdown"
-    >
-      Menu
-    </button>
-    <ul class="dropdown-menu">
-      <li class="dropdown-item">
-        <a class="text-decoration-none" routerLink="home"> Home</a>
-      </li>
-      <li><hr class="dropdown-divider" /></li>
-      <li><h5 class="dropdown-header">Usuários</h5></li>
-      <li class="dropdown-item">
-        <a class="text-decoration-none" routerLink="consultausuario"
-          >Consulta de usuários</a
-        >
-      </li>
-      <li><hr class="dropdown-divider" /></li>
-      <li><h5 class="dropdown-header">Médicos e especialidades</h5></li>
-      <li class="dropdown-item">
-        <a class="text-decoration-none" routerLink="medicos"
-          >Consulta de médicos</a
-        >
-      </li>
-      <li class="dropdown-item">
-        <a class="text-decoration-none" routerLink="cadastrocontato"
-          >Cadastro de médicos</a
-        >
-      </li>
-      <li class="dropdown-item">
-        <a class="text-decoration-none" routerLink="consultacontato"
-          >Consulta de médicos ADM</a
-        >
-      </li>
-    </ul>
-  </div>
+
+
+<nav class="navbar navbar-expand-lg navbar fixed-top bg-light pd-5">
+  <ul class="nav">
+    <div class="dropdown">
+      <button
+        type="button"
+        class="btn btn-primary dropdown-toggle pd-10 ml-5"
+        data-bs-toggle="dropdown"
+      >
+        Menu
+      </button>
+      <ul class="dropdown-menu">
+        <li class="dropdown-item">
+          <a class="text-decoration-none" routerLink="home"> Home</a>
+        </li>
+        <li><hr class="dropdown-divider" /></li>
+        <li><h5 class="dropdown-header">Usuários</h5></li>
+        <li class="dropdown-item">
+          <a *ngIf="!userLogado.email" class="text-decoration-none" routerLink="consultausuario"
+            >Consulta de usuários</a>
+        </li>
+        <li><hr class="dropdown-divider" /></li>
+        <li><h5 class="dropdown-header">Médicos e especialidades</h5></li>
+        <li class="dropdown-item">
+          <a *ngIf="!userLogado.email" class="text-decoration-none" routerLink="medicos"
+            >Consulta de médicos</a>
+        </li>
+        <li class="dropdown-item">
+          <a *ngIf="!userLogado.email" class="text-decoration-none" routerLink="cadastrocontato"
+            >Cadastro de médicos</a
+          >
+        </li>
+        <li class="dropdown-item">
+          <a *ngIf="userLogado.perfil=='ADM'" class="text-decoration-none" routerLink="consultacontato"
+            >Consulta de médicos ADM</a
+          >
+        </li>
+        <li class="dropdown-item">
+          <a class="text-decoration-none" routerLink="registraUsuario"
+            >Registrar-se</a
+          >
+        </li>
+      </ul>
+    </div>
+
+  </ul>
+
+
   <img class="mx-auto" src="assets/logocapCopia.png" alt="cap" />
   <ap-header></ap-header>
 </nav>
 
 <router-outlet></router-outlet>
 
-<footer class="site-footer text-center container-fluid pd-5 mt-30 mb-0 ">
 
+  <mat-toolbar class="footer">
+    <span>
+        Desenvolvido com
+        <i class="material-icons red v-middle">
+            favorite
+        </i>
+        por <strong>Cap<span class="red">G</span>emini</strong>
+    </span>
+</mat-toolbar>
 
-  <p class="font-weight-light">Clinica Capgemini</p>
-  <p class="font-weight-light">AV. Antonio Carlos Magalhães, n 3840</p>
-  <p class="font-weight-light">Salvador-BA</p>
-  <p class="font-weight-light">Tel:(71) 3333-3333</p>
-</footer>

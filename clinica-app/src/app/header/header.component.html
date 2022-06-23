@@ -1,4 +1,5 @@
 <header>
+
     <div *ngIf="(user$ | async) as user; else login">
       <i class='fa fa-envelope-open' style='font-size:20px;color:#0070AD'></i>
           <a class="mr-1"> {{user.email}} </a>

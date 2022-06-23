@@ -8,4 +8,16 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'clinica-app';
 
+  userLogado: any = {}
+  pegarPerfilUsuarioConectado(){
+    let user: (string | null) = localStorage.getItem("userConectado")
+    if(user != null){
+      user = JSON.parse(user)
+      this.userLogado = user
+    }
+  }
+  constructor(){
+    this.pegarPerfilUsuarioConectado();
+  }
+/****** */
 }
