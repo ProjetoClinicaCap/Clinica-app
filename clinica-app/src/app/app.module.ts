@@ -53,6 +53,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -70,6 +72,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MessageRequiredComponent,
     HeaderComponent,
     NavComponent,
+
+
 
 
   ],
@@ -113,6 +117,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatSortModule,
     MatSidenavModule,
     MatPaginatorModule
+
 
 
   ],

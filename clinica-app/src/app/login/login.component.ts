@@ -44,6 +44,7 @@ loginForm!: FormGroup;
           console.log(err);
           this.loginForm.reset();
           this.userNameInput?.nativeElement.focus();
+
           alert('Email ou senha incorretos');
         });
       }
