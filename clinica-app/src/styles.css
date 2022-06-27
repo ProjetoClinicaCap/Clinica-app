@@ -41,10 +41,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .red {
   color: #e35e6b;
 }
+h3 {
+  text-align: center;
+  color: indianred;
+  font-weight: 400;
+}
 
-
-@import "~mdb-angular-ui-kit/assets/scss/mdb.scss";
-@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
-@import "~@fortawesome/fontawesome-free/scss/solid.scss";
-@import "~@fortawesome/fontawesome-free/scss/regular.scss";
-@import "~@fortawesome/fontawesome-free/scss/brands.scss";

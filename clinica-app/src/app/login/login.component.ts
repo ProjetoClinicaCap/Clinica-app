@@ -39,7 +39,7 @@ loginForm!: FormGroup;
     const senha = this.loginForm.get('senha')?.value;
     this.auth.authenticate(email, senha)
         .subscribe(
-              () => this.router.navigateByUrl('home'),
+              () => this.router.navigateByUrl('loginpage'),
             err => {
           console.log(err);
           this.loginForm.reset();

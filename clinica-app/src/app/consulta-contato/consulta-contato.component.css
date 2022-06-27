@@ -1,5 +1,6 @@
 .has-search .form-control {
     padding-left: 2.375rem;
+
 }
 
 .has-search .form-control-feedback {
@@ -17,6 +18,7 @@
 table {
     width: 100%;
     border-collapse: collapse;
+
 }
 
 thead {
@@ -27,6 +29,8 @@ thead {
 th {
     padding: 5px;
     text-align: left;
+
+
 }
 
 tbody tr:nth-child(even) {
@@ -36,4 +40,15 @@ tbody tr:nth-child(even) {
 tbody tr:hover {
     background-color: #12ABDB;
     color: #0d0f99;
+
+}
+body {
+  background-image: url('../../assets/background2.jpg');
+  background-attachment:fixed;
+  background-repeat:round;
+  background-size: cover;
+  min-height: 100vh;
+  max-height: fit-content;
+  min-width: 100vw;
+  margin-top: 6%;
 }

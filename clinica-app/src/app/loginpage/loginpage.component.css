@@ -1,0 +1,19 @@
+span {
+  font-size: large;
+  color: rgb(17, 25, 32);
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.2;
+
+}
+.subtitle{
+
+
+  background-repeat:round;
+  background-size: cover;
+  min-height: 100vh;
+  max-height: fit-content;
+  min-width: 100vw;
+  background-image: url('../../assets/myproject.jpg');
+}
+

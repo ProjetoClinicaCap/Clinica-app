@@ -1,27 +1,23 @@
 import { Injectable } from '@angular/core';
 
-
-
 const KEY = 'token';
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DecodeTokenService {
-
   hasToken() {
     return !!this.getToken();
-}
+  }
 
-setToken(token: string) {
+  setToken(token: string) {
     window.localStorage.setItem(KEY, token);
-}
+  }
 
-getToken() {
+  getToken() {
     return window.localStorage.getItem(KEY);
-}
+  }
 
-removeToken() {
+  removeToken() {
     window.localStorage.removeItem(KEY);
-}
-
+  }
 }

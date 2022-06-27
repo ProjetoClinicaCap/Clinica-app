@@ -1,58 +1,50 @@
-/*.container {
-  background-image: url('../assets/clinica2.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}*/
 input {
-
   padding: 12px 20px;
-  margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
   margin-top: 1%;
   display: block;
-  width: 30%;
+  width: 50%;
   margin-bottom: 5px;
   border-radius: 8px;
   margin-left: 33%;
-
-
 }
 button {
   display: inline;
-  background-color: #0070AD;
-
+  background-color: #0070ad;
   color: white;
-  padding: 15px 32px;
-  text-align: center;
+  padding: 12px 20px;
+  text-align:center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   font-family: "Arial";
-  margin: 4px 2px;
   cursor: pointer;
-  margin-left: 43%;
-
-
-
-
+  margin-left: 33%;
+  width: 50%;
 }
-
-a {
-  margin-left: 0%;
-
-}
-
 p {
-  margin-left: 40%;
-
+  padding: 12px 20px;
+  display: inline-block;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 1%;
+  display: block;
+  width: 50%;
+  margin-bottom: 5px;
+  border-radius: 8px;
+  margin-left: 33%;
 }
-h5{
+h5 {
   margin-top: 80px;
-  margin-left: 45%;
-
-
+  margin-left: 40%;
+}
+form {
+  background-image: url("../../assets/clinica6.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-attachment: scroll;
 }

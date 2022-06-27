@@ -1,6 +1,5 @@
 
 import { DecodeTokenService } from './decode-token.service';
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Usuario } from './usuario';
 import { BehaviorSubject } from 'rxjs';
@@ -12,6 +11,8 @@ import jwt_decode from 'jwt-decode';
 export class Usuario2Service {
   private userSubject = new BehaviorSubject<Usuario>(null!);
   private userName!: string;
+  private perfil!: string;
+
 
   constructor(private DecodeToken: DecodeTokenService) {
 
@@ -32,6 +33,7 @@ export class Usuario2Service {
       const token = this.DecodeToken.getToken();
       const user = jwt_decode(token!) as Usuario;
       this.userName = user.email;
+      this.perfil = user.perfil;
       this.userSubject.next(user);
   }
 

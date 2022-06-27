@@ -12,15 +12,15 @@ export class EditaUsuarioComponent implements OnInit {
 
   msg: string = "";
 
-  constructor(private route: ActivatedRoute, 
-    private serviceUsuario: UsuarioService,) { }
+  constructor(private route: ActivatedRoute,
+    private serviceUsuario: UsuarioService,) {
+    }
 
-    
+
   ngOnInit(): void {
     let routeParams = this.route.snapshot.paramMap;
-    let email: any = String(routeParams.get('email'))
-    console.log('Email: '+email)
-    this.serviceUsuario.getOne(email).subscribe(x => this.user = x)
+    let id: number = Number(routeParams.get('id'))
+    this.serviceUsuario.getOne(id).subscribe(x => this.user = x)
   }
 
   efetivarAlteracao(){

@@ -1,7 +1,7 @@
+import { Usuario2Service } from './usuario2.service';
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot} from '@angular/router';
 import { Observable } from 'rxjs';
-import { DecodeTokenService } from './decode-token.service';
 import {DecodeJWTService} from './decode-jwt.service'
 
 @Injectable({
@@ -10,8 +10,9 @@ import {DecodeJWTService} from './decode-jwt.service'
 export class AuthAdm implements CanActivate  {
 
   constructor(private decodeJWT: DecodeJWTService,
-    private decodeToken: DecodeTokenService,
-    private router: Router) { }
+    private router: Router, private Usuario2Service: Usuario2Service) { }
+
+
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot):
      boolean | Observable<boolean> {
 
