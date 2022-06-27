@@ -1,0 +1,8 @@
+body {
+  background-image: url('../../assets/clinica6.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  margin-top: 6%;
+}

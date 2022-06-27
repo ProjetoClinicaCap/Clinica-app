@@ -13,7 +13,8 @@ export class EditaUsuarioComponent implements OnInit {
   msg: string = "";
 
   constructor(private route: ActivatedRoute,
-    private serviceUsuario: UsuarioService,) { }
+    private serviceUsuario: UsuarioService,) {
+    }
 
 
   ngOnInit(): void {
