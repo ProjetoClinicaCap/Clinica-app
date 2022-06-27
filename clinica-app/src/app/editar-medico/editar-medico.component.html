@@ -5,9 +5,10 @@
 body {
   background-image: url('../../assets/clinica6.jpg');
   background-repeat: no-repeat;
-  background-attachment: fixed;  
+  background-attachment: fixed;
   background-size: cover;
   height: 100vh;
+  margin-top: 4%;
 }
 </style>
 </head>
@@ -15,7 +16,7 @@ body {
     <div class="d-flex h-200">
       <div class="container">
         <h3 class="text-center mb-2">Editar dados do Médico</h3>
-      
+
         <input class="form-control mb-2" type="text" [(ngModel)]="contato.nome" />
         <input class="form-control mb-2" type="text" [(ngModel)]="contato.crm" />
         <input class="form-control mb-2" type="text" [(ngModel)]="contato.telefone" />
@@ -30,7 +31,7 @@ body {
         </button>
         <label class="text-success font-weight-bold">{{ msg }}</label>
       </div>
-        
+
     </div>
 </body>
 </html>

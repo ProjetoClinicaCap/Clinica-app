@@ -8,6 +8,7 @@ body {
   background-attachment: fixed;
   background-size: cover;
   height: 100vh;
+  margin-top: 6%;
 }
 
 </style>
@@ -16,11 +17,10 @@ body {
     <div class="d-flex h-200">
       <div class="container">
         <h3 class="text-center">Editar dados do Usuário</h3>
-
+        <input class="form-control mb-2" type="text" [(ngModel)]="user.nome" />
         <input class="form-control mb-2" type="text" [(ngModel)]="user.email" />
         <input class="form-control mb-2" type="text" [(ngModel)]="user.perfil" />
         <input class="form-control mb-2" type="text" [(ngModel)]="user.senha" required/>
-
         <button class="btn btn-primary mt-3" (click)="efetivarAlteracao()">Gravar</button>
         <label class="text-success font-weight-bold">{{ msg }}</label>
       </div>

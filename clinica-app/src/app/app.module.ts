@@ -22,7 +22,6 @@ import { MessageRequiredComponent } from './message-required/message-required.co
 import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import { NavComponent } from './nav/nav.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatDatepickerModule} from '@angular/material/datepicker';
@@ -50,6 +49,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { LoginpageComponent } from './loginpage/loginpage.component';
 
 
 
@@ -72,7 +72,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     FilterPipe,
     MessageRequiredComponent,
     HeaderComponent,
-    NavComponent,
+    LoginpageComponent,
+
 
 
 

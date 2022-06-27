@@ -1,58 +1,59 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-body {
-  background-image: url('../../assets/background2.jpg');
-  background-repeat:round;
-  background-size: cover;
-  min-height: 100vh;
-  max-height: fit-content;
-  background-attachment: scroll;
-  min-width: 100vw;
-
-
-}
-</style>
-</head>
-<body>
+  <head>
+    <style>
+      body {
+        background-image: url("../../assets/background2.jpg");
+        background-repeat: round;
+        background-size: cover;
+        min-height: 100vh;
+        max-height: fit-content;
+        background-attachment: scroll;
+        min-width: 100vw;
+      }
+    </style>
+  </head>
+  <body>
     <div class="d-flex h-200">
-        <div class="container">
-            <h1 style="margin-top: 20%;">
-                Consulta de Usuários
-            </h1>
+      <div class="container">
+        <h1 style="margin-top: 20%">Consulta de Usuários</h1>
 
-            <table>
-                <thead>
-                    <tr>
-
-                        <th>E-mail</th>
-                        <th>senha</th>
-                        <th>perfil</th>
-                        <th>Editar</th>
-                        <th>Excluir</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let user of usuarios">
-
-                        <td>{{ user.email}}</td>
-                        <td>{{ user.senha}}</td>
-                        <td>{{user.perfil}}</td>
-                        <td> <a [routerLink]="['/usuario',user.email]"><i class="material-icons">mode_edit</i></a></td>
-                        <td> <i role="button" class="material-icons text-primary" (click)="excluir(user.email)">delete</i></td>
-
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-
+        <table>
+          <thead>
+            <tr>
+              <th>id</th>
+              <th>Nome</th>
+              <th>E-mail</th>
+              <th>perfil</th>
+              <th>Editar</th>
+              <th>Excluir</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of usuario">
+              <td>{{ user.id }}</td>
+              <td>{{ user.nome }}</td>
+              <td>{{ user.email }}</td>
+              <td>{{ user.perfil }}</td>
+              <td>
+                <a [routerLink]="['/usuario', user.id]"
+                  ><i class="material-icons">mode_edit</i></a
+                >
+              </td>
+              <td>
+                <i
+                  role="button"
+                  class="material-icons text-primary"
+                  (click)="excluir(user.id)"
+                  >delete</i
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-
-</body>
+  </body>
 </html>
 
-
 <router-outlet></router-outlet>
-

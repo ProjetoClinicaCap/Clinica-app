@@ -9,10 +9,10 @@ import { UsuarioService } from '../usuario.service';
 })
 export class ConsultaUsuarioComponent implements OnInit {
 
-  usuarios: any;
+  usuario: any;
 
   constructor(private serviceUsuario: UsuarioService ) {
-    this.serviceUsuario.getAll().subscribe(x => this.usuarios = x)
+    this.serviceUsuario.getAll().subscribe(x => this.usuario = x)
    }
 
   ngOnInit(): void {

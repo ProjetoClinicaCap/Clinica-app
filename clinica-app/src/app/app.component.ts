@@ -9,6 +9,7 @@ export class AppComponent {
   title = 'clinica-app';
 
   userLogado: any = {}
+  decodeJWT: any;
   pegarPerfilUsuarioConectado(){
     let user: (string | null) = localStorage.getItem("userConectado")
     if(user != null){
@@ -20,4 +21,14 @@ export class AppComponent {
     this.pegarPerfilUsuarioConectado();
   }
 /****** */
+temUsuarioLogado(): boolean {
+  let token =  this.decodeJWT.decodeTokenJWT()
+  return token != "";
+}
+
+ehAdministrador(){
+  let token =  JSON.stringify(this.decodeJWT.decodeTokenJWT())
+  let ob = JSON.parse(token)
+  return ob.perfil == 'ADM'
+}
 }
