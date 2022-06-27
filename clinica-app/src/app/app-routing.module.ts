@@ -1,3 +1,5 @@
+import { LoginpageComponent } from './loginpage/loginpage.component';
+import { AuthLogin } from './auth-login.service';
 import { AuthAdm } from './auth-adm.service';
 import { AuthGuard } from './auth/auth.guard';
 import { NgModule } from '@angular/core';
@@ -11,7 +13,6 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { MedicosComponent } from './medicos/medicos.component';
 import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario.component';
-import { ErrosComponent } from './erros/erros.component';
 
 
 const routes: Routes = [
@@ -25,21 +26,21 @@ const routes: Routes = [
     path: 'home',
     component: HomeComponent
   },
-  
+  {
+    path: 'loginpage',
+    component: LoginpageComponent
+
+  },
+
   {
     path: 'cadastrocontato',
     component: CadastroContatoComponent,
     canActivate: [AuthAdm]
-
-
-
-
-
   },
   {
     path: 'consultacontato',
     component: ConsultaContatoComponent,
-    canActivate: [AuthAdm]
+    canActivate: [AuthAdm, AuthLogin]
 
 
   },
@@ -50,13 +51,15 @@ const routes: Routes = [
   },
   {
     path:'cadastro/:idcontato',
-    component: EditarMedicoComponent
+    component: EditarMedicoComponent,
+    canActivate: [AuthAdm, AuthLogin]
 
   },
 
   {
     path: 'registraUsuario',
     component: RegistrarUsuarioComponent,
+    canActivate: [AuthGuard]
 
   },
   {
@@ -65,7 +68,7 @@ const routes: Routes = [
     canActivate: [AuthAdm]
   },
   {
-    path:'usuario/:email',
+    path:'usuario/:id',
     component: EditaUsuarioComponent,
   },
   {
