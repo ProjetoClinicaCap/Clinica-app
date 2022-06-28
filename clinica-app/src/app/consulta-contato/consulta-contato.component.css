@@ -1,51 +1,46 @@
 .has-search .form-control {
-    padding-left: 2.375rem;
-
+  padding-left: 2.375rem;
 }
 
 .has-search .form-control-feedback {
-    position: absolute;
-    z-index: 2;
-    display: block;
-    width: 2.375rem;
-    height: 2.375rem;
-    line-height: 2.375rem;
-    text-align: center;
-    pointer-events: none;
-    color: #aaa;
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
-
+  width: 100%;
+  border-collapse: collapse;
 }
 
 thead {
-    background-color: #0070AD;
-    color: white;
+  background-color: #0070ad;
+  color: white;
 }
 
 th {
-    padding: 5px;
-    text-align: left;
-
-
+  padding: 5px;
+  text-align: left;
 }
 
 tbody tr:nth-child(even) {
-    background-color: silver;
+  background-color: silver;
 }
 
 tbody tr:hover {
-    background-color: #12ABDB;
-    color: #0d0f99;
-
+  background-color: #12abdb;
+  color: #0d0f99;
 }
 body {
-  background-image: url('../../assets/background2.jpg');
-  background-attachment:fixed;
-  background-repeat:round;
+  background-image: url("../../assets/background2.jpg");
+  background-attachment: fixed;
+  background-repeat: round;
   background-size: cover;
   min-height: 100vh;
   max-height: fit-content;
