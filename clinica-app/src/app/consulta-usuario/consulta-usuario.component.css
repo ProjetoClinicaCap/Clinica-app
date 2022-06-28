@@ -17,3 +17,12 @@ tbody tr:hover {
   background-color: #12abdb;
   color: #0d0f99;
 }
+body {
+  background-image: url("../../assets/background2.jpg");
+  background-repeat: round;
+  background-size: cover;
+  min-height: 100vh;
+  max-height: fit-content;
+  background-attachment: scroll;
+  min-width: 100vw;
+}

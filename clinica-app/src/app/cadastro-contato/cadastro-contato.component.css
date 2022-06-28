@@ -1,19 +1,19 @@
 .botoes {
-    width: 100%;
-    margin-top: 10px;
+  width: 100%;
+  margin-top: 10px;
 }
 
 input {
-    width: 100%;
-    margin-bottom: 6px;
-    padding: 6px;
-    border-radius: 8px;
+  width: 100%;
+  margin-bottom: 6px;
+  padding: 6px;
+  border-radius: 8px;
 }
 
 div.ng-invalid {
-    color: red;
+  color: red;
 }
-.estilo{
+.estilo {
   background-image: url("../../assets/clinica6.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;

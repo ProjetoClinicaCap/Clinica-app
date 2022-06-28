@@ -14,74 +14,63 @@ import { LoginComponent } from './login/login.component';
 import { MedicosComponent } from './medicos/medicos.component';
 import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario.component';
 
-
 const routes: Routes = [
-
   {
     path: '',
-    component: HomeComponent
-
+    component: HomeComponent,
   },
   {
     path: 'home',
-    component: HomeComponent
+    component: HomeComponent,
   },
   {
     path: 'loginpage',
-    component: LoginpageComponent
-
+    component: LoginpageComponent,
   },
 
   {
     path: 'cadastrocontato',
     component: CadastroContatoComponent,
-    canActivate: [AuthAdm]
+    canActivate: [AuthAdm],
   },
   {
     path: 'consultacontato',
     component: ConsultaContatoComponent,
-    canActivate: [AuthAdm, AuthLogin]
-
-
+    canActivate: [AuthAdm, AuthLogin],
   },
   {
     path: 'login',
     component: LoginComponent,
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard],
   },
   {
-    path:'cadastro/:idcontato',
+    path: 'cadastro/:idcontato',
     component: EditarMedicoComponent,
-    canActivate: [AuthAdm, AuthLogin]
-
+    canActivate: [AuthAdm, AuthLogin],
   },
 
   {
     path: 'registraUsuario',
     component: RegistrarUsuarioComponent,
-    canActivate: [AuthGuard]
-
+    canActivate: [AuthGuard],
   },
   {
     path: 'consultausuario',
     component: ConsultaUsuarioComponent,
-    canActivate: [AuthAdm]
+    canActivate: [AuthAdm],
   },
   {
-    path:'usuario/:id',
+    path: 'usuario/:id',
     component: EditaUsuarioComponent,
   },
   {
-    path:'medicos',
+    path: 'medicos',
     component: MedicosComponent,
-
   },
-
-
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
