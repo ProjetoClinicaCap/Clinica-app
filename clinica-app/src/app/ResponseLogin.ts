@@ -1,5 +1,4 @@
-export interface ResponseLogin
-{
-    message: string;
-    token: string;
+export interface ResponseLogin {
+  message: string;
+  token: string;
 }

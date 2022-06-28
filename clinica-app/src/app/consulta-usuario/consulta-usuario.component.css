@@ -1,25 +1,19 @@
 table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
-
 thead {
-    background-color: #0070AD;
-    color: white;
-
+  background-color: #0070ad;
+  color: white;
 }
-
 th {
-    padding: 5px;
-    text-align: left;
-
+  padding: 5px;
+  text-align: left;
 }
-
 tbody tr:nth-child(even) {
-    background-color: silver;
+  background-color: silver;
 }
-
 tbody tr:hover {
-    background-color: #12ABDB;
-    color: #0d0f99;
+  background-color: #12abdb;
+  color: #0d0f99;
 }

@@ -1,5 +1,3 @@
-
-
 <nav class="navbar navbar-expand-lg navbar fixed-top bg-light pd-5">
   <ul class="nav">
     <div class="dropdown">
@@ -16,50 +14,47 @@
         </li>
         <li><hr class="dropdown-divider" /></li>
         <li><h5 class="dropdown-header">Usuários</h5></li>
-        <li  *ngIf="userLogado.perfil=='ADM'"class="dropdown-item">
+        <li *ngIf="userLogado.perfil == 'ADM'" class="dropdown-item">
           <a class="text-decoration-none" routerLink="registraUsuario"
-            >Registrar-se</a>
+            >Registrar-se</a
+          >
         </li>
-        <li  *ngIf="userLogado.perfil=='ADM'" class="dropdown-item">
-          <a  class="text-decoration-none" routerLink="consultausuario"
-            >Consulta de usuários</a>
+        <li *ngIf="userLogado.perfil == 'USUARIO'" class="dropdown-item">
+          <a class="text-decoration-none" routerLink="consultausuario"
+            >Consulta de usuários</a
+          >
         </li>
         <li><hr class="dropdown-divider" /></li>
         <li><h5 class="dropdown-header">Médicos e especialidades</h5></li>
         <li class="dropdown-item">
-          <a  class="text-decoration-none" routerLink="medicos"
-            >Consulta de médicos</a>
+          <a class="text-decoration-none" routerLink="medicos"
+            >Consulta de médicos</a
+          >
         </li>
         <li class="dropdown-item">
-          <a   class="text-decoration-none" routerLink="cadastrocontato"
-            >Cadastro de médicos</a>
+          <a
+            *ngIf="userLogado.perfil == 'USUARIO'"
+            class="text-decoration-none"
+            routerLink="cadastrocontato"
+            >Cadastro de médicos</a
+          >
         </li>
         <li class="dropdown-item">
           <a class="text-decoration-none" routerLink="consultacontato"
             >Consulta de médicos ADM</a
           >
         </li>
-
       </ul>
     </div>
-
   </ul>
-
-
   <img class="mx-auto" src="assets/logocapCopia.png" alt="cap" />
   <ap-header></ap-header>
 </nav>
-
 <router-outlet></router-outlet>
-
-
-  <mat-toolbar class="footer">
-    <span>
-        Desenvolvido com
-        <i class="material-icons red v-middle">
-            favorite
-        </i>
-        por <strong>Cap<span class="red">G</span>emini</strong>
-    </span>
+<mat-toolbar class="footer">
+  <span>
+    Desenvolvido com
+    <i class="material-icons red v-middle"> favorite </i>
+    por <strong>Cap<span class="red">G</span>emini</strong>
+  </span>
 </mat-toolbar>
-

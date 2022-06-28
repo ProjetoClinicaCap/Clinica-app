@@ -9,7 +9,8 @@
           type="text"
           class="form-control mb-3"
           placeholder="Pesquise por especialidade"
-          (keyup)="filtro = $any($event.target).value"/>
+          (keyup)="filtro = $any($event.target).value"
+        />
       </div>
       <table>
         <thead>
@@ -34,14 +35,16 @@
             <td>{{ contato.especialidade.especialidade }}</td>
             <td>
               <a [routerLink]="['/cadastro', contato.id]"
-                ><i class="material-icons">mode_edit</i></a>
+                ><i class="material-icons">mode_edit</i></a
+              >
             </td>
             <td>
               <i
                 role="button"
                 class="material-icons text-primary"
                 (click)="excluir(contato.id)"
-                >delete</i>
+                >delete</i
+              >
             </td>
           </tr>
         </tbody>

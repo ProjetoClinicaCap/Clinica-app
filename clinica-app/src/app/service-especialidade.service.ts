@@ -3,14 +3,13 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ServiceEspecialidadeService {
+  constructor(private http: HttpClient) {}
 
-  constructor(private http: HttpClient) { }
-
-  getAllEspecialidade() : Observable<string[]> {
-    let url = 'https://clinica-java.herokuapp.com/especialidade'
-    return this.http.get<string[]>(url)
+  getAllEspecialidade(): Observable<string[]> {
+    let url = 'https://clinica-java.herokuapp.com/especialidade';
+    return this.http.get<string[]>(url);
   }
 }

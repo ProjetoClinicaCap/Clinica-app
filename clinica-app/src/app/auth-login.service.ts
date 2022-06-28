@@ -1,24 +1,33 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot } from '@angular/router';
+import {
+  ActivatedRouteSnapshot,
+  CanActivate,
+  Router,
+  RouterStateSnapshot,
+} from '@angular/router';
 import { Observable } from 'rxjs';
 import { DecodeTokenService } from './decode-token.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthLogin implements CanActivate {
+  constructor(
+    private decodeToken: DecodeTokenService,
+    private router: Router
+  ) {}
 
-  constructor(private decodeToken: DecodeTokenService,
-    private router: Router) { }
-
-  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | boolean {
-    if(!this.temUsuarioLogado()){
-       this.router.navigate(['/login'])
+  canActivate(
+    route: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot
+  ): Observable<boolean> | boolean {
+    if (!this.temUsuarioLogado()) {
+      this.router.navigate(['/login']);
     }
     return true;
   }
   temUsuarioLogado(): boolean {
-    let token = this.decodeToken.getToken()
-    return token != "";
+    let token = this.decodeToken.getToken();
+    return token != '';
   }
 }
