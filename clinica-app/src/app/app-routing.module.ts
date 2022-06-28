@@ -1,6 +1,6 @@
+import { ErrosComponent } from './erros/erros.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
-import { AuthLogin } from './auth-login.service';
-import { AuthAdm } from './auth-adm.service';
+import { AuthAdm } from './auth/auth-adm.service';
 import { AuthGuard } from './auth/auth.guard';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, CanActivate } from '@angular/router';
@@ -36,7 +36,7 @@ const routes: Routes = [
   {
     path: 'consultacontato',
     component: ConsultaContatoComponent,
-    canActivate: [AuthAdm, AuthLogin],
+    canActivate: [AuthAdm],
   },
   {
     path: 'login',
@@ -46,7 +46,7 @@ const routes: Routes = [
   {
     path: 'cadastro/:idcontato',
     component: EditarMedicoComponent,
-    canActivate: [AuthAdm, AuthLogin],
+    canActivate: [AuthAdm],
   },
 
   {
@@ -66,6 +66,10 @@ const routes: Routes = [
   {
     path: 'medicos',
     component: MedicosComponent,
+  },
+  {
+    path: 'erro',
+    component: ErrosComponent,
   },
 ];
 

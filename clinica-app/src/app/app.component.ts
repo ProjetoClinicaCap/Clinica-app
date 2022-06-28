@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { AuthAdm } from './auth-adm.service';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +8,6 @@ import { AuthAdm } from './auth-adm.service';
 export class AppComponent {
   title = 'clinica-app';
   userLogado: any = {};
-  //decodeJWT: any;
   pegarPerfilUsuarioConectado() {
     let user: string | null = localStorage.getItem('userConectado');
     if (user != null) {
@@ -18,18 +16,7 @@ export class AppComponent {
       console.log(user);
     }
   }
-  constructor(private authAdm: AuthAdm) {
+  constructor() {
     this.pegarPerfilUsuarioConectado();
   }
-  /****** */
-  /*temUsuarioLogado(): boolean {
-    let token = this.decodeJWT.decodeTokenJWT();
-    return token != '';
-  }
-/*
-  ehAdministrador() {
-    let token = JSON.stringify(this.decodeJWT.decodeTokenJWT());
-    let ob = JSON.parse(token);
-    return ob.perfil == 'ADM';
-  }*/
 }

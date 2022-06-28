@@ -20,4 +20,5 @@ div.ng-invalid {
   background-size: cover;
   height: 100vh;
   margin-top: 6%;
+  overflow: auto;
 }
