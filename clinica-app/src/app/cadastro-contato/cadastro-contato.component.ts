@@ -12,6 +12,7 @@ interface Dias {
   styleUrls: ['./cadastro-contato.component.css'],
 })
 export class CadastroContatoComponent implements OnInit {
+
   dia: Dias[] = [
     { value: 'Segunda-feira', viewValue: 'Segunda-Feira' },
     { value: 'Terça-feira', viewValue: 'Terça-Feira' },

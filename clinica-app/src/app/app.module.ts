@@ -12,12 +12,10 @@ import { EditaUsuarioComponent } from './edita-usuario/edita-usuario.component';
 import { ConsultaUsuarioComponent } from './consulta-usuario/consulta-usuario.component';
 import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario.component';
 import { EditarMedicoComponent } from './editar-medico/editar-medico.component';
-import { ErrosComponent } from './erros/erros.component';
 import { MedicosComponent } from './medicos/medicos.component';
 import { FilterPipe } from './filter.pipe';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { ErrorsModule } from './errors/errors.module';
 import { MessageRequiredComponent } from './message-required/message-required.component';
 import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -62,7 +60,6 @@ import { LoginpageComponent } from './loginpage/loginpage.component';
     RegistrarUsuarioComponent,
     ConsultaUsuarioComponent,
     EditaUsuarioComponent,
-    ErrosComponent,
     MedicosComponent,
     FilterPipe,
     MessageRequiredComponent,
@@ -77,7 +74,6 @@ import { LoginpageComponent } from './loginpage/loginpage.component';
     HttpClientModule,
     RouterModule,
     CommonModule,
-    ErrorsModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatInputModule,

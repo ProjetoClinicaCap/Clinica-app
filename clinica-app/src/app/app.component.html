@@ -19,7 +19,7 @@
             >Registrar-se</a
           >
         </li>
-        <li class="dropdown-item">
+        <li *ngIf= "administrador" class="dropdown-item">
           <a class="text-decoration-none" routerLink="consultausuario"
             >Consulta de usuários</a
           >
@@ -31,13 +31,13 @@
             >Consulta de médicos</a
           >
         </li>
-        <li class="dropdown-item">
+        <li *ngIf= "administrador" class="dropdown-item">
           <a class="text-decoration-none" routerLink="cadastrocontato"
             >Cadastro de médicos</a
           >
         </li>
-        <li class="dropdown-item">
-          <a class="text-decoration-none" routerLink="consultacontato"
+        <li *ngIf= "administrador" class="dropdown-item">
+          <a  class="text-decoration-none" routerLink="consultacontato"
             >Consulta de médicos ADM</a
           >
         </li>

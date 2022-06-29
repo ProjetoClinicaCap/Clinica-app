@@ -1,4 +1,3 @@
-import { ErrosComponent } from './erros/erros.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
 import { AuthAdm } from './auth/auth-adm.service';
 import { AuthGuard } from './auth/auth.guard';
@@ -62,15 +61,13 @@ const routes: Routes = [
   {
     path: 'usuario/:id',
     component: EditaUsuarioComponent,
+    canActivate: [AuthAdm]
   },
   {
     path: 'medicos',
     component: MedicosComponent,
   },
-  {
-    path: 'erro',
-    component: ErrosComponent,
-  },
+
 ];
 
 @NgModule({
